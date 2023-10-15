@@ -34,12 +34,12 @@ $('#conversion-form').on('submit', function(e) {
     });
 });
 
-$('#conversion-form').on('submit', function(e) {
+$('#registro-form').on('submit', function(e) {
     e.preventDefault();
     $.ajax({
-        url: 'conversion.php',
+        url: 'registro.php',
         method: 'post',
-        data: $('#conversion-form').serialize(),
+        data: $('#registro-form').serialize(),
         dataType: 'json',
         success: function(data) {
                 var resultadoLabel = $('#resultado');
