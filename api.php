@@ -1,4 +1,10 @@
 <?php
+
+/* if (isset($_REQUEST['endpoint'])) {
+    include 'saludo.html';
+} else {
+    echo "Parámetro 'endpoint' no proporcionado";
+} */
 if ($_REQUEST['endpoint']=='saludo'){
 
 include 'saludo.html';

@@ -1,12 +1,12 @@
 <?php
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $nombre = $_POST['nombre'];
-  $saludo = "¡Hola $nombre!";
-  echo $saludo;
+  if (isset($_POST['nombre'])&& $_POST['nombre'] !== ''){
+   $nombre = $_POST['nombre'];
+  echo json_encode(array('message' => 'Hola ' . $nombre));
+  } else {
+  echo json_encode(array ('message'=> 'Hola Usuario'));
+  }
 } else {
-  echo "¡Hola, usuario!";
+  echo json_encode(array('message'=>'Error'));
 }
-
 ?>
-
