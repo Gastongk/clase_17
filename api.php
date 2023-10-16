@@ -18,4 +18,9 @@ if($_REQUEST['endpoint']=='login'){
 
     include 'login.html';
 }
+
+if($_REQUEST['endpoint']=='productos'){
+
+    include 'productos.html';
+}
 ?>

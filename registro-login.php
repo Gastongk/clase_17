@@ -35,6 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     if ($contraseña === $contraseñaAlmacenada) {
                         echo json_encode(array('message' => 'Usuario logueado correctamente'));
+                      /*    $_SESSION['autenticado'] = true;
+                        header('Location: productos.html');
+                        exit;  */
                     } else {
                         echo json_encode(array('message' => 'Contraseña incorrecta'));
                     }
