@@ -13,4 +13,9 @@ if($_REQUEST['endpoint']=='registro'){
 
     include 'registro.html';
 }
+
+if($_REQUEST['endpoint']=='login'){
+
+    include 'login.html';
+}
 ?>
