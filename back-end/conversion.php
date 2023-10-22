@@ -15,5 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode(array('message' => 'Conversión no admitida'));
         }
     }
+}else{
+    include '../front-end/conversion.html';
 }
+
 ?>

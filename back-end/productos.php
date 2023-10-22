@@ -22,8 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $productos[] = $row;
         }
         echo json_encode($productos);
+       
     } else {
-        echo json_encode(array('error' => mysqli_error($conn))); // Devuelve un array vacío en caso de error
+        echo json_encode(array('error' => mysqli_error($conn))); 
     }
     mysqli_close($conn);
 

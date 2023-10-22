@@ -7,6 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   echo json_encode(array ('message'=> 'Hola Usuario'));
   }
 } else {
-  echo json_encode(array('message'=>'Error'));
+  include '../front-end/saludo.html';
 }
 ?>

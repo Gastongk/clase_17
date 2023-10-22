@@ -2,26 +2,26 @@
 
 if ($_REQUEST['endpoint']=='saludo'){
 
-include 'saludo.html';
+include 'saludo.php';
 }
 
 if ($_REQUEST['endpoint']=='conversion'){
 
-    include 'conversion.html';
+    include 'conversion.php';
 }
 
 if($_REQUEST['endpoint']=='registro'){
 
-    include 'registro.html';
+    include 'registro-login.php';
 }
 
 if($_REQUEST['endpoint']=='login'){
 
-    include 'login.html';
+    include 'registro-login.php';
 }
 
 if($_REQUEST['endpoint']=='productos'){
 
-    include 'productos.html';
+    include '../front-end/productos.html';
 }
 ?>

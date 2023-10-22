@@ -54,6 +54,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(array('message' => 'Faltan datos de formulario'));
     }
 } else {
-    echo json_encode(array('message' => 'Acción no válida'));
+    if (isset($_GET['endpoint'])) {
+        $endpoint = $_GET['endpoint'];
+    
+        if ($endpoint === 'registro') {
+            include '../front-end/registro.html';
+        } elseif ($endpoint === 'login') {
+            include '../front-end/login.html';
+        } 
+    } else {
+        // Manejar el caso en el que "endpoint" no se proporciona en la solicitud.
+        echo json_encode(['message' => 'Parámetro "endpoint" no proporcionado.']);
+    }
 }
 ?>
